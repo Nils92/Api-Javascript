@@ -3,12 +3,12 @@ function buttonClickGet() {
   let réponse = document.getElementById("zone_réponse");
   let siren = document.getElementById('siren').value;
   let Apikey = document.getElementById('clef').value;
-  fetch('https://fichiers.jefacture.com/comapi/invoice/'+ siren +'/AP/transfer', {
-    credentials: 'include',
-    headers: { "X-SOFTWARE-ID" : "3731e96e-dafd-4e6e-8e41-66d7e486f8ee", "X-API-KEY" :  Apikey ,'Accept': 'application/json',
-          'Content-Type': 'application/json'}
-  })
+  $.ajax({
+    url: 'https://fichiers.jefacture.com/comapi/invoice/'+ siren +'/AP/transfer',
+    headers: { 'X-SOFTWARE-ID': '3731e96e-dafd-4e6e-8e41-66d7e486f8ee', 'X-API-KEY' : Apikey}
+   });
   }
+
 
   // .then((response) => {
   //     console.log('Json: ', response.status);
