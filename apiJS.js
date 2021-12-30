@@ -10,6 +10,7 @@ function buttonClickGet() {
   }
 
 
+
   // .then((response) => {
   //     console.log('Json: ', response.status);
   //     const result = { data: response.json(), status: response.status };
